@@ -156,6 +156,17 @@ h2.hidden{
   background-size: cover;
 }
 
+#bio-mikka .bio-photo:hover{
+  background-image: url('../images/mikka-2.jpeg');
+  background-size: cover;
+  background-position: bottom;
+  -webkit-transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+
+}
+
 #bio-kateh .bio-photo {
   background-image: url('../images/kateh.jpg');
   background-size: cover;
