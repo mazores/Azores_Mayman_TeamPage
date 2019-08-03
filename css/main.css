@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap');
+
 html, body {
     margin: 0;
     height:100%;
     width:100%;
     padding:0;
+}
+
+h2.hidden{
+  display:none;
 }
 
 #wrapper {
@@ -52,23 +59,47 @@ html, body {
 }
 
 #i-am-name {
-  width: 40%;
+  width: 60%;
   right: 0;
   left: 0;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 #button-mikka, #button-kateh {
-  width: 200px;
-  height: 50px;
-  background-color: #b48940;
+  background-image:url('../images/txt-bg-clip.jpg');
+  border:none;
+  font-family:'Mr Dafoe', cursive;
+  font-size:40px;
+  font-weight:500;
+  letter-spacing:2px;
+  padding:10px;
+  width:300px;
+  color:#fff;
+  outline:none;
 }
+
+#button-mikka:hover{
+  border-radius: 40px 0 40px 0;
+  -webkit-transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+#button-kateh:hover{
+  border-radius: 0 40px 0 40px;
+  -webkit-transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
 
 /* BIO */
 
@@ -91,7 +122,7 @@ html, body {
 
 #bio-mikka.slideToggle {
   left: 0 !important;
-} 
+}
 
 #bio-kateh {
   width: 100%;
@@ -112,10 +143,10 @@ html, body {
 
 #bio-kateh.slideToggle {
   right: 0 !important;
-} 
+}
 
 .bio-photo {
-  width: 732px;
+  width: 50%;
   height: 100%;
   background-color: #b48940;
 }
@@ -123,17 +154,28 @@ html, body {
 #bio-mikka .bio-photo {
   background-image: url('../images/mikka.jpg');
   background-size: cover;
-} 
+}
 
 #bio-kateh .bio-photo {
   background-image: url('../images/kateh.jpg');
   background-size: cover;
   background-position: center;
-} 
+}
+
+#bio-kateh .bio-photo:hover{
+  background-image: url('../images/kateh-2.jpg');
+  background-size: cover;
+  background-position: center;
+  -webkit-transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+
+}
 
 /* BIO-CONTENT*/
 .bio-info {
-  width: 571px;
+  width: 43.5%;
   height: 100%;
   background-color: #171717;
   display: flex;
@@ -143,7 +185,6 @@ html, body {
 
 .bio-info-content {
   width: 458px;
-  height: 471px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -151,47 +192,103 @@ html, body {
 }
 
 h2.info-name {
-  font-size: 30px;
-  color: #b48940;
+  font-family: 'Mr Dafoe', cursive;
+  color:#d9a95a;
+  font-size:60px;
+  letter-spacing:2px;
+  background-image:url('../images/txt-bg-clip.jpg');
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  position:relative;
+  padding-left:10px;
+  padding-bottom:10px;
+
 }
 
 .info-body {
-  width: 415px;
-  height: 303px;
+  width: 410px;
   margin-left: 45px;
   margin-top: 30px;
 }
 
 .info-body p {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
-  line-height: 1.4;
-  color: #ffffff;
+  line-height: 1.6;
+  color: #dbdbdb;
 }
 
 .info-links {
   width: 415px;
   height: 40px;
   margin-left: 45px;
-  background-color: #b48940;
+  margin-top:35px;
+  display:flex;
+  flex-direction:row;
+}
+
+.info-links li{
+  display:inline;
+  padding-right:5px;
+  outline:none;
+}
+
+.info-links li:hover{
+  opacity:0.7;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+
+}
+
+.info-button{
+  background-image:url('../images/txt-bg-clip.jpg');
+  border:none;
+  font-family: 'Raleway', sans-serif;
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:1px;
+  cursor:pointer;
+  padding:9px 30px 9px 30px;
+  margin-left:50px;
+  outline:none;
+}
+
+.info-button:hover{
+  border-radius: 0 20px 0 20px;
+  -webkit-transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
 }
 
 /* BACK TO HOME*/
 .bio-exit {
-  width: 63px;
+  width: 7.5%;
   height: 100%;
   background-color: #252525;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.from-mikka, .from-kateh {
-  width: 48px;
-  height: 106px;
-  background-color: #b48940;
+.from-mikka, .from-kateh{
+  width: 60%;
   margin: 0 auto;
+  opacity:0.6;
 }
 
-
+.from-mikka:hover, .from-kateh:hover{
+  opacity:1;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+ }
